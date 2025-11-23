@@ -2,115 +2,275 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amitesh Raikwar · SRE & DevOps Architect</title>
-  <meta name="description" content="Home page of multi-page portfolio for Amitesh Raikwar – SRE & DevOps Architect, Linux OS developer and multi-cloud specialist.">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amitesh Raikwar | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #e9eff5;
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-50 antialiased">
+<body class="antialiased text-gray-900">
 
-  <!-- Top Nav -->
-  <header class="sticky top-0 z-40 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
-    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="h-9 w-9 rounded-full bg-gradient-to-tr from-emerald-400 to-cyan-500 flex items-center justify-center font-black text-slate-950">
+  <!-- TOP NAV (Facebook-style) -->
+  <header class="fixed top-0 inset-x-0 z-20 bg-[#1877F2] text-white shadow">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between h-14">
+
+      <!-- Left: Logo + search -->
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-lg font-bold">
           AR
         </div>
-        <div>
-          <div class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-400">
-            since 1987
-          </div>
-          <div class="text-sm font-bold leading-tight">
-            Amitesh&nbsp;Raikwar
-          </div>
-        </div>
-      </a>
-      <nav class="flex gap-4 text-xs sm:text-sm text-slate-300">
-        <a href="index.html" class="hover:text-emerald-300">Home</a>
-        <a href="skills.html" class="hover:text-emerald-300">Skills</a>
-        <a href="experience.html" class="hover:text-emerald-300">Experience</a>
-        <a href="certifications.html" class="hover:text-emerald-300">Certifications</a>
-        <a href="education.html" class="hover:text-emerald-300">Education</a>
-        <a href="contact.html" class="hover:text-emerald-300">Connect</a>
+        <span class="hidden sm:inline text-lg font-semibold tracking-wide">
+          amiteshraikwar.com
+        </span>
+      </div>
+
+      <!-- Center: simple "tabs" -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <button class="border-b-2 border-white pb-1">Home</button>
+        <button class="pb-1 hover:border-b-2 hover:border-white/70">Timeline</button>
+        <button class="pb-1 hover:border-b-2 hover:border-white/70">Projects</button>
+        <button class="pb-1 hover:border-b-2 hover:border-white/70">About</button>
       </nav>
+
+      <!-- Right: profile + contact -->
+      <div class="flex items-center space-x-3 text-sm">
+        <div class="hidden sm:flex flex-col items-end leading-tight">
+          <span class="font-semibold">Amitesh Raikwar</span>
+          <span class="text-xs text-blue-100">DevOps | Cloud | Containers</span>
+        </div>
+        <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-bold">
+          A
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 pt-10 pb-16 space-y-10">
+  <!-- MAIN LAYOUT -->
+  <main class="pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-4 gap-4">
 
-    <section class="grid gap-10 md:grid-cols-[3fr,2fr] items-center">
-      <div>
-        <p class="text-xs font-semibold tracking-[0.25em] text-emerald-300 uppercase mb-3">
-          SRE · DEVOPS · CLOUD · LINUX OS
-        </p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">
-          Designing reliable systems and mentoring engineering teams.
-        </h1>
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-3">
-          I&apos;m <span class="font-semibold text-emerald-300">Amitesh Raikwar</span>
-          (born 2 April 1987) – a Linux OS developer, SRE &amp; DevOps Architect with more than a decade
-          of experience across cloud platforms like <span class="font-semibold">AWS, Azure, GCP and IBM Cloud</span>,
-          data center operations, VM development and automation.
-        </p>
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-4">
-          I specialise in building secure, scalable and observable infrastructure, leading teams, and translating
-          complex requirements into practical solutions across enterprises and product environments.
-        </p>
+      <!-- LEFT COLUMN: PROFILE SUMMARY -->
+      <aside class="lg:col-span-1 space-y-4">
+        <!-- Profile card -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <div class="h-24 bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-400"></div>
+          <div class="px-4 pb-4 -mt-10">
+            <div class="flex items-end space-x-3">
+              <div class="w-20 h-20 rounded-full border-4 border-white bg-gray-200 flex items-center justify-center text-2xl font-bold text-blue-700">
+                AR
+              </div>
+              <div class="pb-1">
+                <h1 class="text-xl font-bold">Amitesh Raikwar</h1>
+                <p class="text-xs text-gray-500">
+                  DevOps • Containers • Automation
+                </p>
+              </div>
+            </div>
 
-        <div class="flex flex-wrap gap-3 mt-4">
-          <a href="experience.html" class="px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 text-sm font-semibold hover:bg-emerald-400">
-            View Experience
-          </a>
-          <a href="skills.html" class="px-4 py-2 rounded-lg border border-slate-600 text-sm font-semibold hover:border-emerald-400 hover:text-emerald-300">
-            Explore Skills
-          </a>
+            <div class="mt-4 text-xs text-gray-600 space-y-1">
+              <p><span class="font-semibold">Based in:</span> Bengaluru, India</p>
+              <p><span class="font-semibold">Current focus:</span> Cloud-native apps, CI/CD, Kubernetes</p>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">DevOps</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Docker</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Kubernetes</span>
+              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Automation</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick links -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h2 class="text-sm font-semibold mb-3">Quick Links</h2>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="flex justify-between hover:text-blue-600">
+              <span>About Amitesh</span><span>›</span></a></li>
+            <li><a href="#skills" class="flex justify-between hover:text-blue-600">
+              <span>Technical Skills</span><span>›</span></a></li>
+            <li><a href="#projects" class="flex justify-between hover:text-blue-600">
+              <span>Highlighted Projects</span><span>›</span></a></li>
+            <li><a href="#contact" class="flex justify-between hover:text-blue-600">
+              <span>Contact & Social</span><span>›</span></a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- CENTER COLUMN: FEED -->
+      <section class="lg:col-span-2 space-y-4">
+
+        <!-- Create post style box -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <div class="flex space-x-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-blue-700">
+              A
+            </div>
+            <div class="flex-1">
+              <div class="w-full border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-500 bg-gray-50">
+                Share something about your latest work...
+              </div>
+              <div class="flex justify-between mt-3 text-xs text-gray-500">
+                <span>Portfolio feed is auto-updated with your pinned work.</span>
+                <span class="hidden sm:inline">"Facebook style" layout • Personal portfolio</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="space-y-4">
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 text-sm">
-          <h2 class="font-semibold mb-1 text-emerald-300">Core Profile</h2>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            Cloud Architecture · Server Development · Application Development ·
-            Database Administration · Data Center Operations · VM &amp; OS Engineering.
+        <!-- POST: ABOUT -->
+        <article id="about" class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <header class="px-4 pt-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-sm font-semibold text-blue-700">
+                A
+              </div>
+              <div>
+                <p class="text-sm font-semibold">Amitesh Raikwar</p>
+                <p class="text-[11px] text-gray-500">About • Just now</p>
+              </div>
+            </div>
+          </header>
+          <div class="px-4 pb-4 pt-2 text-sm leading-relaxed text-gray-700">
+            <p>
+              I am a technology professional with strong experience in
+              <span class="font-semibold">DevOps, automation, cloud infrastructure, and container platforms.</span>
+              I enjoy building reliable CI/CD pipelines, scalable microservices platforms, and solving complex deployment challenges.
+            </p>
+            <p class="mt-2">
+              Passionate about scripting, infrastructure-as-code, and modern engineering practices,
+              I like to collaborate with teams to ship secure, stable, and high-quality software.
+            </p>
+          </div>
+        </article>
+
+        <!-- POST: TECH STACK -->
+        <article id="skills" class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <header class="px-4 pt-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-sm font-semibold text-blue-700">
+                A
+              </div>
+              <div>
+                <p class="text-sm font-semibold">Amitesh Raikwar</p>
+                <p class="text-[11px] text-gray-500">Skills • Updated</p>
+              </div>
+            </div>
+          </header>
+          <div class="px-4 pb-4 pt-2 text-sm text-gray-700 space-y-3">
+            <div>
+              <p class="font-semibold text-xs uppercase text-gray-500">DevOps & Automation</p>
+              <p>Ansible, Chef, Jenkins, CI/CD, Git, pipelines, monitoring & observability.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-xs uppercase text-gray-500">Containers & Orchestration</p>
+              <p>Docker, Kubernetes, OpenShift, containerized microservices, cloud-native deployments.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-xs uppercase text-gray-500">Languages & Scripting</p>
+              <p>Java, C#, Python, Perl, shell scripting for automation and tooling.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST: PROJECTS -->
+        <article id="projects" class="bg-white rounded-xl shadow-sm border border-gray-200">
+          <header class="px-4 pt-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center text-sm font-semibold text-blue-700">
+                A
+              </div>
+              <div>
+                <p class="text-sm font-semibold">Amitesh Raikwar</p>
+                <p class="text-[11px] text-gray-500">Projects • Highlights</p>
+              </div>
+            </div>
+          </header>
+          <div class="px-4 pb-4 pt-2 text-sm text-gray-700 space-y-4">
+            <div class="border border-gray-100 rounded-lg p-3">
+              <p class="font-semibold text-sm">CI/CD Pipeline for Microservices</p>
+              <p class="text-xs text-gray-500 mb-1">Jenkins • Docker • Kubernetes</p>
+              <p>
+                Designed and implemented an automated pipeline for building, testing, and deploying
+                microservices to a Kubernetes cluster, improving release frequency and reliability.
+              </p>
+            </div>
+            <div class="border border-gray-100 rounded-lg p-3">
+              <p class="font-semibold text-sm">Infrastructure Automation Toolkit</p>
+              <p class="text-xs text-gray-500 mb-1">Ansible • Python • Linux</p>
+              <p>
+                Built reusable playbooks and scripts to provision servers, configure services,
+                and standardize environments across multiple stages.
+              </p>
+            </div>
+            <div class="border border-gray-100 rounded-lg p-3">
+              <p class="font-semibold text-sm">Observability & Monitoring Setup</p>
+              <p class="text-xs text-gray-500 mb-1">Dashboards • Alerts • Logs</p>
+              <p>
+                Integrated monitoring and log analytics to surface key metrics, alerts, and trends,
+                helping teams detect and resolve issues faster.
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- RIGHT COLUMN: CONTACT & WIDGETS -->
+      <aside class="lg:col-span-1 space-y-4">
+
+        <!-- Contact / Social -->
+        <section id="contact" class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h2 class="text-sm font-semibold mb-3">Contact & Social</h2>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <span class="font-semibold">Email:</span>
+              <a href="mailto:you@example.com" class="text-blue-600 hover:underline">
+                you@example.com
+              </a>
+            </li>
+            <li>
+              <span class="font-semibold">LinkedIn:</span>
+              <a href="#" class="text-blue-600 hover:underline">
+                linkedin.com/in/amiteshraikwar
+              </a>
+            </li>
+            <li>
+              <span class="font-semibold">GitHub:</span>
+              <a href="#" class="text-blue-600 hover:underline">
+                github.com/amiteshraikwar
+              </a>
+            </li>
+            <li>
+              <span class="font-semibold">Website:</span>
+              <span>amiteshraikwar.com</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Small widgets -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h2 class="text-sm font-semibold mb-3">Status</h2>
+          <ul class="space-y-2 text-xs text-gray-700">
+            <li>✅ Open to challenging DevOps / SRE roles</li>
+            <li>✅ Comfortable with remote & hybrid work</li>
+            <li>💬 Happy to collaborate on open-source / tech talks</li>
+          </ul>
+        </section>
+
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+          <h2 class="text-sm font-semibold mb-3">Tagline</h2>
+          <p class="text-sm text-gray-700">
+            "Turning code into reliable, scalable systems — one deployment at a time."
           </p>
-        </div>
+        </section>
 
-        <div class="grid grid-cols-2 gap-3 text-xs">
-          <div class="rounded-xl border border-slate-800 bg-slate-900/70 p-3">
-            <div class="font-semibold text-slate-100 mb-1">Core Competencies</div>
-            <ul class="space-y-1 text-slate-300 list-disc list-inside">
-              <li>SRE &amp; DevOps Leadership</li>
-              <li>Solution &amp; Cloud Architecture</li>
-              <li>Data Center &amp; VM Operations</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-slate-800 bg-slate-900/70 p-3">
-            <div class="font-semibold text-slate-100 mb-1">Soft Skills</div>
-            <ul class="space-y-1 text-slate-300 list-disc list-inside">
-              <li>Stakeholder Management</li>
-              <li>Team Mentoring &amp; Leadership</li>
-              <li>Decision Making &amp; Problem Solving</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="rounded-xl border border-emerald-500/40 bg-gradient-to-tr from-emerald-500/10 to-cyan-500/10 p-3 text-xs text-slate-200">
-          Open to opportunities in <span class="font-semibold">Bengaluru</span> and
-          <span class="font-semibold">global roles</span> across SRE, DevOps Architecture, Cloud Architecture
-          and Platform Engineering.
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="border-t border-slate-800 bg-slate-950">
-    <div class="max-w-6xl mx-auto px-4 py-4 text-xs text-slate-500 flex flex-col sm:flex-row justify-between gap-2">
-      <div>© 2025 · Brand <span class="text-slate-200">Amitesh Raikwar</span> · since 1987</div>
-      <div>Multi-page portfolio template.</div>
+      </aside>
     </div>
-  </footer>
+  </main>
 
 </body>
 </html>
