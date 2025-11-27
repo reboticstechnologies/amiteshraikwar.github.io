@@ -2,218 +2,433 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Amitesh Raikwar | Home</title>
+  <title>Amitesh Raikwar | LinkedIn-style Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-color: #e9eff5;
+      background: #0f172a;
+    }
+    /* Custom scrollbar for long lists */
+    .thin-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .thin-scrollbar::-webkit-scrollbar-thumb {
+      border-radius: 999px;
+      background: #cbd5f5;
     }
   </style>
 </head>
-<body class="antialiased text-gray-900">
-
-  <!-- TOP NAV (Facebook-style) -->
-  <header class="fixed top-0 inset-x-0 z-20 bg-[#1877F2] text-white shadow">
-    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between h-14">
-
-      <!-- Left: Logo + Title -->
-      <div class="flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-lg font-bold">
+<body class="text-slate-100 antialiased">
+  <!-- Top Navigation -->
+  <header class="border-b border-slate-800 sticky top-0 z-30 bg-slate-950/80 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-sm font-bold">
           AR
         </div>
-        <span class="hidden sm:inline text-lg font-semibold tracking-wide">
-          amiteshraikwar.com
-        </span>
+        <span class="font-semibold tracking-tight text-slate-50">Amitesh Raikwar</span>
       </div>
-
-      <!-- Center Navigation -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-        <a href="index.html" class="border-b-2 border-white pb-1">Home</a>
-        <a href="about.html" class="pb-1 hover:border-b-2 hover:border-white/70">About</a>
-        <a href="education.html" class="pb-1 hover:border-b-2 hover:border-white/70">Education</a>
-        <a href="experience.html" class="pb-1 hover:border-b-2 hover:border-white/70">Experience</a>
-        <a href="certifications.html" class="pb-1 hover:border-b-2 hover:border-white/70">Certifications</a>
-        <a href="training.html" class="pb-1 hover:border-b-2 hover:border-white/70">Training</a>
-        <a href="services.html" class="pb-1 hover:border-b-2 hover:border-white/70">Services</a>
-        <a href="contact.html" class="pb-1 hover:border-b-2 hover:border-white/70">Contact</a>
+      <nav class="hidden md:flex gap-6 text-sm text-slate-300">
+        <a href="#about" class="hover:text-emerald-400">About</a>
+        <a href="#skills" class="hover:text-emerald-400">Skills</a>
+        <a href="#experience" class="hover:text-emerald-400">Experience</a>
+        <a href="#education" class="hover:text-emerald-400">Education</a>
+        <a href="#certifications" class="hover:text-emerald-400">Certifications</a>
+        <a href="#contact" class="hover:text-emerald-400">Contact</a>
       </nav>
-
-      <!-- Right: Profile -->
-      <div class="flex items-center space-x-3 text-sm">
-        <div class="hidden sm:flex flex-col items-end leading-tight">
-          <span class="font-semibold">Amitesh Raikwar</span>
-          <span class="text-xs text-blue-100">DevOps | Cloud | Containers</span>
-        </div>
-        <div class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm font-bold">
-          A
-        </div>
-      </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="pt-16 pb-10">
-    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-4 gap-4">
-
-      <!-- LEFT COLUMN -->
-      <aside class="lg:col-span-1 space-y-4">
-
-        <!-- Profile Card -->
-        <section class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-          <div class="h-24 bg-gradient-to-r from-blue-500 via-indigo-500 to-sky-400"></div>
-
-          <div class="px-4 pb-4 -mt-10">
-            <div class="flex items-end space-x-3">
-              <div class="w-20 h-20 rounded-full border-4 border-white bg-gray-200 flex items-center justify-center text-2xl font-bold text-blue-700">
-                AR
-              </div>
-
-              <div>
-                <h1 class="text-xl font-bold">Amitesh Raikwar</h1>
-                <p class="text-xs text-gray-500">
-                  DevOps • Containers • Automation
-                </p>
-              </div>
-            </div>
-
-            <div class="mt-4 text-xs text-gray-600 space-y-1">
-              <p><span class="font-semibold">Based in:</span> Bengaluru, India</p>
-              <p><span class="font-semibold">Focus:</span> Cloud-native apps, CI/CD, Kubernetes</p>
-            </div>
-
-            <div class="mt-4 flex flex-wrap gap-2 text-xs">
-              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">DevOps</span>
-              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Docker</span>
-              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Kubernetes</span>
-              <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded-full">Automation</span>
-            </div>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <!-- Hero / Profile -->
+    <section class="grid md:grid-cols-[1.2fr,0.9fr] gap-6">
+      <!-- Left: summary -->
+      <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-500 to-sky-500 flex items-center justify-center text-3xl font-bold">
+            AR
           </div>
-        </section>
+          <div class="space-y-1">
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-50">
+              AMITESH RAIKWAR
+            </h1>
+            <p class="text-sm sm:text-base text-emerald-300 font-medium">
+              Senior DevOps & Multi-Cloud Engineer | Automation | Infrastructure | Full Stack
+            </p>
+            <p class="text-xs sm:text-sm text-slate-400">
+              Bhopal, India · Available for leadership roles, consulting & cloud transformation projects
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs sm:text-[13px]">
+          <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">
+            DevOps & CI/CD
+          </span>
+          <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/30">
+            Multi-Cloud (AWS · Azure · GCP · IBM · Alibaba)
+          </span>
+          <span class="px-3 py-1 rounded-full bg-violet-500/10 text-violet-300 border border-violet-500/30">
+            Containers & Kubernetes
+          </span>
+          <span class="px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/30">
+            Infra as Code (Terraform · Ansible · Chef · Puppet)
+          </span>
+        </div>
+        <p id="about" class="text-sm sm:text-[15px] leading-relaxed text-slate-200">
+          Senior DevOps and Cloud Engineer with extensive hands-on experience designing, automating and
+          operating large-scale, mission-critical environments for global clients including SAP, Intel,
+          IBM, Huawei, DXC Technology, Airtel, BHEL and GoDaddy. Strong background across multi-cloud,
+          Linux/Windows administration, virtualization, CI/CD, security, scripting and full stack
+          development.
+        </p>
+      </div>
 
-        <!-- Quick Links -->
-        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h2 class="text-sm font-semibold mb-3">Quick Links</h2>
-          <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="flex justify-between hover:text-blue-600">About<span>›</span></a></li>
-            <li><a href="education.html" class="flex justify-between hover:text-blue-600">Education<span>›</span></a></li>
-            <li><a href="experience.html" class="flex justify-between hover:text-blue-600">Experience<span>›</span></a></li>
-            <li><a href="services.html" class="flex justify-between hover:text-blue-600">Services<span>›</span></a></li>
-            <li><a href="training.html" class="flex justify-between hover:text-blue-600">Online Training<span>›</span></a></li>
-            <li><a href="contact.html" class="flex justify-between hover:text-blue-600">Contact<span>›</span></a></li>
-          </ul>
-        </section>
-
-      </aside>
-
-      <!-- CENTER COLUMN (Feed Style) -->
-      <section class="lg:col-span-2 space-y-4">
-
-        <!-- Create Post Box -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <div class="flex space-x-3">
-            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-semibold text-blue-700">
-              A
-            </div>
-            <div class="flex-1">
-              <div class="w-full border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-500 bg-gray-50">
-                Share something about your latest work...
-              </div>
-            </div>
+      <!-- Right: quick info -->
+      <aside class="space-y-4">
+        <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4 space-y-3">
+          <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+            Technical Skills
+          </h2>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              Java
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              C++
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              C
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              Python
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              .NET
+            </span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-800 text-slate-100 border border-slate-700">
+              Node.js (Full Stack)
+            </span>
           </div>
         </div>
 
-        <!-- ABOUT -->
-        <article id="about" class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h3 class="font-semibold text-lg mb-2">About Amitesh</h3>
-          <p class="text-sm text-gray-700">
-            Technology professional with strong experience in <strong>DevOps, automation, cloud infrastructure, and container platforms</strong>.
-            Experienced in building CI/CD pipelines, cloud-native deployments, and high-availability environments.
-          </p>
-        </article>
-
-        <!-- TECH SKILLS -->
-        <article id="skills" class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h3 class="font-semibold text-lg mb-2">Technical Skills</h3>
-
-          <ul class="text-sm text-gray-700 space-y-3">
-            <li><strong>DevOps:</strong> Ansible, Chef, Jenkins, CI/CD</li>
-            <li><strong>Containers:</strong> Docker, Kubernetes, OpenShift</li>
-            <li><strong>Languages:</strong> Java, C#, Python, Perl</li>
-            <li><strong>Version Control:</strong> Git, GitHub, GitLab</li>
+        <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4 space-y-2">
+          <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+            Soft Skills
+          </h2>
+          <ul class="text-xs sm:text-sm text-slate-200 space-y-1">
+            <li>• Collaboration Skills</li>
+            <li>• Time Management Skills</li>
+            <li>• Interpersonal Proficiency</li>
+            <li>• Strong Communicator</li>
+            <li>• Decision Maker</li>
+            <li>• Problem-Solving Acumen</li>
           </ul>
-        </article>
+        </div>
 
-        <!-- PROJECT SECTION -->
-        <article id="projects" class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h3 class="font-semibold text-lg mb-3">Highlighted Projects</h3>
+        <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-4 space-y-2" id="contact">
+          <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+            Contact & Links
+          </h2>
+          <ul class="text-xs sm:text-sm space-y-1 text-slate-200">
+            <li><span class="font-semibold text-slate-100">Email:</span> <a href="mailto:amiteshraikwar@gmail.com" class="text-emerald-300 hover:underline">amiteshraikwar@gmail.com</a></li>
+            <li><span class="font-semibold text-slate-100">LinkedIn:</span> <a href="https://www.linkedin.com/in/dramiteshraikwar/" target="_blank" class="text-emerald-300 hover:underline">linkedin.com/in/dramiteshraikwar</a></li>
+            <li><span class="font-semibold text-slate-100">GitHub:</span> <a href="https://github.com/amiteshraikwar" target="_blank" class="text-emerald-300 hover:underline">github.com/amiteshraikwar</a></li>
+            <li><span class="font-semibold text-slate-100">Website:</span> <a href="https://amiteshraikwar.com" class="text-emerald-300 hover:underline">amiteshraikwar.com</a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
 
-          <div class="space-y-4">
+    <!-- Skills Overview -->
+    <section id="skills" class="grid lg:grid-cols-3 gap-6">
+      <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-5 space-y-3">
+        <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+          DevOps & Tools
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300">
+          Git · GitHub · Bitbucket · Jenkins · JIRA · Ansible · Chef · Puppet · Docker · Kubernetes ·
+          Terraform · CI/CD pipelines · Monitoring & logging.
+        </p>
+      </div>
 
-            <div class="p-3 border border-gray-100 rounded-lg">
-              <h4 class="text-sm font-bold">CI/CD Pipeline Automation</h4>
-              <p class="text-xs text-gray-500">Jenkins • Docker • Kubernetes</p>
-              <p class="text-sm">Designed an automated deployment pipeline for microservices.</p>
+      <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-5 space-y-3">
+        <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+          Cloud & Infrastructure
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300">
+          AWS · Microsoft Azure · GCP · IBM Cloud · Alibaba Cloud · Networking · VPC · Storage ·
+          Security · Load Balancing · High Availability · VMware · Citrix · Virtualization.
+        </p>
+      </div>
+
+      <div class="bg-slate-900/80 rounded-2xl border border-slate-800 p-5 space-y-3">
+        <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+          Scripting & Databases
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300">
+          Shell · Python · PowerShell · SQL · MySQL · MariaDB · database design, automation scripts,
+          dashboards & tooling.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience & Education Layout -->
+    <section class="grid lg:grid-cols-[1.6fr,1fr] gap-6 items-start">
+      <!-- Experience -->
+      <section id="experience" class="bg-slate-900/80 rounded-2xl border border-slate-800 p-6 space-y-4">
+        <div class="flex items-center justify-between gap-2 mb-1">
+          <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+            Experience
+          </h2>
+          <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+            ~13+ years total experience
+          </span>
+        </div>
+
+        <!-- Company: Superfast Golden Bird Research Industries Pvt. Ltd. -->
+        <article class="border border-slate-800 rounded-xl p-4 bg-slate-950/40 space-y-2">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <div>
+              <h3 class="text-sm sm:text-base font-semibold text-slate-100">
+                Senior DevOps Engineer
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Superfast Golden Bird Research Industries Pvt. Ltd., Bhopal
+              </p>
             </div>
-
-            <div class="p-3 border border-gray-100 rounded-lg">
-              <h4 class="text-sm font-bold">Infrastructure Automation Toolkit</h4>
-              <p class="text-xs text-gray-500">Ansible • Python</p>
-              <p class="text-sm">Automated full infra provisioning with reusable playbooks.</p>
-            </div>
-
+            <p class="text-[11px] sm:text-xs text-slate-400">
+              Jul 2012 – Jun 2020 · Multiple global clients
+            </p>
           </div>
+          <p class="text-xs sm:text-sm text-emerald-300">
+            Worked with SAP, Intel, IBM, GoDaddy, Huawei (South Africa) and telecom clients (MTN,
+            Cell C, Vodacom, Telkom) as DevOps / Cloud / Web Services engineer.
+          </p>
 
+          <!-- Project Highlights -->
+          <div class="mt-2 space-y-3 text-xs sm:text-sm text-slate-200">
+            <!-- DXC -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior DevOps Engineer – DXC Technology
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jan 2020 – Jun 2020
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs mb-1 text-slate-300">
+                EIT Services India Private Limited (formerly Hewlett-Packard Globalsoft Pvt. Ltd.)
+              </p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Designed and maintained CI/CD pipelines using Jenkins, Git and Maven.</li>
+                <li>Automated configuration management with Ansible and Chef across Linux/Windows.</li>
+                <li>Implemented containerized workloads using Docker & Kubernetes on AWS/Azure.</li>
+                <li>Built Terraform scripts for repeatable environment provisioning.</li>
+                <!-- Add more detailed points from your description here if you want -->
+              </ul>
+            </div>
+
+            <!-- Intel -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior DevOps Engineer – Intel Corporation
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Aug 2019 – Dec 2019
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Developed and supported DevOps toolchain (Git, Jenkins, JIRA, Ansible, Chef, Puppet).</li>
+                <li>Managed Azure cloud workloads including storage, networking, VMs and DevOps pipelines.</li>
+                <li>Built Docker/Kubernetes based deployments with Terraform-managed infrastructure.</li>
+              </ul>
+            </div>
+
+            <!-- SAP -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior DevOps Engineer – SAP
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jan 2019 – Jul 2019
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Implemented DevOps practices with Git, Jenkins, JIRA, Ansible, Chef and Puppet.</li>
+                <li>Delivered scalable solutions across AWS and Azure using Terraform and Kubernetes.</li>
+              </ul>
+            </div>
+
+            <!-- Huawei (South Africa) -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior DevOps Engineer – Huawei (South Africa)
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Mar 2016 – Jun 2018 · Onsite (Cape Town)
+                </span>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300">
+                Supported telecom clients: MTN, Cell C, Vodacom, Telkom.
+              </p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Built and managed CI/CD pipelines and automation for large telecom environments.</li>
+                <li>Deployed and maintained Docker/Kubernetes clusters on AWS/Azure.</li>
+                <li>Collaborated with Chinese and African stakeholders in multi-cultural teams.</li>
+              </ul>
+            </div>
+
+            <!-- IBM -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior DevOps Engineer – IBM
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jul 2018 – Dec 2018
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Delivered DevOps solutions over IBM Cloud (VM creation, subnet management, automation).</li>
+                <li>Integrated Jenkins and GitHub for CI/CD and monitoring dashboards.</li>
+              </ul>
+            </div>
+
+            <!-- Airtel Cloud -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Cloud Engineer – Airtel Cloud Webservices
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jan 2015 – Feb 2016
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Configured and managed Airtel web services including mail and cloud services.</li>
+                <li>Provided Linux server deployment, DNS configuration and production support.</li>
+              </ul>
+            </div>
+
+            <!-- BHEL -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Senior Software Engineer – BHEL Hyderabad (Caterpillar client)
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jan 2014 – Dec 2014
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Supported development and DevOps processes using Git, Jenkins and JIRA.</li>
+                <li>Maintained Linux/Windows servers and performed automation for build & deployment.</li>
+              </ul>
+            </div>
+
+            <!-- GoDaddy -->
+            <div class="border border-slate-800 rounded-lg p-3">
+              <div class="flex flex-wrap justify-between gap-1 mb-1">
+                <span class="font-semibold text-slate-100">
+                  Server Administrator (Linux & Windows) – GoDaddy Webservices
+                </span>
+                <span class="text-[11px] text-slate-400">
+                  Jul 2012 – Dec 2013
+                </span>
+              </div>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Managed Linux and Windows hosting servers, DNS, mail and web services.</li>
+                <li>Handled VM creation, backups, monitoring and incident troubleshooting.</li>
+              </ul>
+            </div>
+
+            <!-- NOTE: 
+              You can paste more detailed bullet points from your full description 
+              into each section above if you want all granularity on the website.
+            -->
+          </div>
         </article>
-
       </section>
 
-      <!-- RIGHT SIDEBAR -->
-      <aside class="lg:col-span-1 space-y-4">
-
-        <!-- Contact -->
-        <section id="contact" class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h2 class="text-sm font-semibold mb-3">Contact & Social</h2>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <strong>Email:</strong><br>
-              <a href="mailto:amiteshraikwar@gmail.com" class="text-blue-600 hover:underline">
-                amiteshraikwar@gmail.com
-              </a>
-            </li>
-
-            <li>
-              <strong>LinkedIn:</strong><br>
-              <a href="https://www.linkedin.com/in/dramiteshraikwar/" target="_blank"
-                 class="text-blue-600 hover:underline">
-                linkedin.com/in/dramiteshraikwar
-              </a>
-            </li>
-
-            <li>
-              <strong>GitHub:</strong><br>
-              <a href="https://github.com/amiteshraikwar" target="_blank"
-                 class="text-blue-600 hover:underline">
-                github.com/amiteshraikwar
-              </a>
-            </li>
-          </ul>
+      <!-- Education + Certifications -->
+      <section class="space-y-4">
+        <!-- Education -->
+        <section id="education" class="bg-slate-900/80 rounded-2xl border border-slate-800 p-5 space-y-3">
+          <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+            Education
+          </h2>
+          <div class="space-y-3 text-xs sm:text-sm text-slate-200">
+            <div class="border border-slate-800 rounded-lg p-3">
+              <p class="font-semibold text-slate-100">
+                M.Tech – Microwave & Millimeter Wave Technology
+              </p>
+              <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</p>
+              <p class="text-slate-300 text-xs">
+                2012 · 68.63%
+              </p>
+            </div>
+            <div class="border border-slate-800 rounded-lg p-3">
+              <p class="font-semibold text-slate-100">
+                B.E. – Electronics & Communication
+              </p>
+              <p>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</p>
+              <p class="text-slate-300 text-xs">
+                2009 · 67%
+              </p>
+            </div>
+          </div>
         </section>
 
-        <!-- Status -->
-        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-          <h2 class="text-sm font-semibold mb-3">Status</h2>
-          <ul class="space-y-2 text-xs text-gray-700">
-            <li>✔ Open for DevOps/SRE roles</li>
-            <li>✔ Comfortable with hybrid/remote work</li>
-            <li>💬 Open-source collaboration welcome</li>
-          </ul>
+        <!-- Certifications -->
+        <section id="certifications" class="bg-slate-900/80 rounded-2xl border border-slate-800 p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <h2 class="text-sm font-semibold tracking-wide text-slate-200 uppercase">
+              Certifications
+            </h2>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+              Cloud · Security · Data · DevOps
+            </span>
+          </div>
+          <div class="max-h-64 thin-scrollbar overflow-y-auto pr-1 text-xs sm:text-[13px] space-y-1.5">
+            <p>• AWS Certified Solutions Architect – Associate (Valid till Aug 13, 2022)</p>
+            <p>• CCNA Routing and Switching – CSCO13190393 (Valid till Jun 12, 2020)</p>
+            <p>• Certified Ethical Hacker – ECC63173936614 (Valid till Dec 06, 2020)</p>
+            <p>• Oracle Certified Associate, Java SE 8 Programmer</p>
+            <p>• Red Hat Certified System Administrator – 170-174-692 (Valid till Jul 26, 2017)</p>
+            <p>• Google Cloud Certified Associate Cloud Engineer (Valid till Sep 13, 2021)</p>
+
+            <p>• Microsoft Certified Azure Administrator Associate – H208-9899 (Valid till Aug 16, 2021)</p>
+            <p>• Microsoft Certified Azure Solutions Architect Expert – H992-6187 (Valid till Oct 10, 2022)</p>
+            <p>• Microsoft Certified Azure for SAP Workloads Specialty – H777-1796 (Valid till May 01, 2023)</p>
+            <p>• Microsoft Certified Azure DevOps Engineer Expert – H628-4079 (Valid till Jan 03, 2023)</p>
+            <p>• Microsoft Certified Azure Security Engineer Associate – H962-7451 (Valid till Jan 03, 2023)</p>
+            <p>• Microsoft Certified Data Analyst Associate – H843-1442 (Valid till Jun 05, 2023)</p>
+            <p>• Microsoft Certified Azure IoT Developer Specialty – H915-4624 (Valid till Jul 31, 2022)</p>
+            <p>• Microsoft Certified Azure Developer Associate – I103-0823 (Valid till Jan 08, 2023)</p>
+            <p>• Microsoft Certified Azure Data Scientist Associate – I020-6582 (Valid till Nov 06, 2022)</p>
+            <p>• Microsoft Certified Azure Database Administrator Associate – I056-4287 (Valid till Dec 04, 2022)</p>
+
+            <p>• Project Management Professional (PMP) – In progress</p>
+          </div>
         </section>
+      </section>
+    </section>
 
-      </aside>
-
-    </div>
+    <!-- Footer -->
+    <footer class="pt-4 pb-6 text-xs text-slate-400 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800 mt-4">
+      <span>© <span id="year"></span> Amitesh Raikwar. All rights reserved.</span>
+      <span>Designed as a LinkedIn-style profile for <span class="text-emerald-300">amiteshraikwar.com</span></span>
+    </footer>
   </main>
 
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
